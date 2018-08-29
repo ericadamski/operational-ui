@@ -100,6 +100,32 @@ const myData = {
 />
 ```
 
+### With `tabs`
+
+Cards support tabs the same way (and with the exact same API) that `Page` components do. These tabs work both as stateful and controlled components, with a controlled one presented below:
+
+```jsx
+initialState = {
+  activeTab: "Tab 1",
+}
+;<Card
+  activeTabName={state.activeTab}
+  onTabChange={newTabName => {
+    setState(() => ({ activeTab: newTabName }))
+  }}
+  tabs={[
+    {
+      name: "Tab 1",
+      children: <Button>One kind of button</Button>,
+    },
+    {
+      name: "Tab 2",
+      children: <Button>The other kind of button</Button>,
+    },
+  ]}
+/>
+```
+
 ### Stacked Cards
 
 ```jsx

@@ -62,5 +62,6 @@ export { default as Small } from "./Typography/Small"
 
 // Internals components
 export { ConfirmBodyProps } from "./Internals/Confirm"
+export { Tab } from "./Internals/Tabs"
 
 export default OperationalUI
